@@ -3,36 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Kos Melati - Hunian Tenang & Strategis di Mantrijeron. Dekat UGM, Fasilitas Lengkap, Bebas Jam Malam.">
-    <title>Kos Melati | Hunian Nyaman & Strategis</title>
+    <meta name="description" content="Green House NS - Kos Eksklusif di Kasihan, Bantul. Dekat UMY, Asri, Fasilitas Lengkap.">
+    <title>Green House NS | Hunian Asri Kasihan</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#15803d', /* Green-700 */
+                        secondary: '#166534', /* Green-800 */
+                        accent: '#dcfce7', /* Green-100 */
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
     <style>
-        body { font-family: 'Inter', sans-serif; }
         .hidden-section { display: none; }
-        .active-tab { border-bottom: 2px solid #0f766e; color: #0f766e; font-weight: 600; }
-        /* Smooth Fade In */
+        .active-tab { border-bottom: 2px solid #15803d; color: #15803d; font-weight: 700; }
         .fade-in { animation: fadeIn 0.5s ease-in; }
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-50 text-gray-800 font-sans">
 
-    <nav class="bg-white shadow-sm fixed w-full z-50 transition-all duration-300">
+    <nav class="bg-white/90 backdrop-blur-md shadow-sm fixed w-full z-50 transition-all duration-300">
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex justify-between items-center py-4">
                 <div class="flex items-center space-x-2">
-                    <i class="fa-solid fa-house-chimney text-teal-600 text-xl"></i>
-                    <span class="font-bold text-xl tracking-tight text-gray-900">Kos Melati</span>
+                    <i class="fa-solid fa-leaf text-primary text-xl"></i>
+                    <span class="font-bold text-xl tracking-tight text-gray-900">Green House NS</span>
                 </div>
                 <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-600">
-                    <a href="#home" class="hover:text-teal-600 transition">Beranda</a>
-                    <a href="#gallery" class="hover:text-teal-600 transition">Galeri</a>
-                    <a href="#kamar" class="hover:text-teal-600 transition">Tipe Kamar</a>
-                    <a href="#lokasi" class="hover:text-teal-600 transition">Lokasi</a>
-                    <button onclick="toggleAdminPanel()" class="text-teal-600 border border-teal-600 px-3 py-1 rounded hover:bg-teal-600 hover:text-white transition">Admin Login</button>
+                    <a href="#home" class="hover:text-primary transition">Beranda</a>
+                    <a href="#gallery" class="hover:text-primary transition">Galeri</a>
+                    <a href="#kamar" class="hover:text-primary transition">Tipe Kamar</a>
+                    <a href="#lokasi" class="hover:text-primary transition">Lokasi</a>
+                    <button onclick="toggleAdminPanel()" class="text-primary border border-primary px-3 py-1 rounded hover:bg-primary hover:text-white transition">Owner Login</button>
                 </div>
             </div>
         </div>
@@ -40,33 +55,45 @@
 
     <main id="publicView">
         
-        <section id="home" class="relative h-[600px] flex items-center justify-center text-center bg-cover bg-center" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80');">
-            <div class="relative z-10 px-4">
-                <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 leading-tight">Hunian Tenang & <br>Strategis di Mantrijeron</h1>
-                <p class="text-gray-200 text-lg mb-8">Kenyamanan maksimal dengan harga terjangkau untuk mahasiswa & profesional.</p>
-                <a href="#kamar" class="bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-8 rounded-full transition transform hover:scale-105 shadow-lg">Lihat Kamar Tersedia</a>
+        <section id="home" class="relative h-[600px] flex items-center justify-center text-center bg-cover bg-center" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1518780664697-55e3ad937233?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80');">
+            <div class="relative z-10 px-4 max-w-4xl">
+                <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold mb-4 inline-block tracking-wide">AVAILABLE FOR BOOKING</span>
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">Hunian Asri & Tenang <br>di Kasihan, Bantul</h1>
+                <p class="text-gray-100 text-lg mb-8 max-w-2xl mx-auto">Pilihan tepat untuk mahasiswa UMY & profesional. Nikmati suasana sejuk Green House dengan akses mudah ke Ringroad.</p>
+                <div class="flex flex-col md:flex-row gap-4 justify-center">
+                    <a href="#kamar" class="bg-primary hover:bg-secondary text-white font-bold py-3 px-8 rounded-lg transition shadow-lg hover:shadow-xl">
+                        Pilih Kamar
+                    </a>
+                    <a href="#lokasi" class="bg-white hover:bg-gray-100 text-gray-900 font-bold py-3 px-8 rounded-lg transition shadow-lg">
+                        Lihat Lokasi
+                    </a>
+                </div>
             </div>
         </section>
 
         <section class="py-16 bg-white">
             <div class="max-w-6xl mx-auto px-4">
-                <h2 class="text-2xl font-bold text-center mb-10 text-gray-900">Fasilitas Unggulan</h2>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                    <div class="p-4 hover:bg-gray-50 rounded-lg transition">
-                        <i class="fa-solid fa-wifi text-4xl text-teal-500 mb-3"></i>
-                        <h3 class="font-semibold">WiFi High Speed</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div class="p-6 border border-gray-100 rounded-2xl hover:shadow-lg transition duration-300">
+                        <div class="w-12 h-12 bg-accent rounded-full flex items-center justify-center mx-auto mb-4 text-primary">
+                            <i class="fa-solid fa-location-dot text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Lokasi Strategis</h3>
+                        <p class="text-gray-500 text-sm">Hanya menit ke kampus UMY, Alma Ata, dan akses cepat ke Ringroad Selatan.</p>
                     </div>
-                    <div class="p-4 hover:bg-gray-50 rounded-lg transition">
-                        <i class="fa-solid fa-kitchen-set text-4xl text-teal-500 mb-3"></i>
-                        <h3 class="font-semibold">Dapur & Kulkas Bersama</h3>
+                    <div class="p-6 border border-gray-100 rounded-2xl hover:shadow-lg transition duration-300">
+                        <div class="w-12 h-12 bg-accent rounded-full flex items-center justify-center mx-auto mb-4 text-primary">
+                            <i class="fa-solid fa-wind text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Suasana Asri</h3>
+                        <p class="text-gray-500 text-sm">Lingkungan Green House yang tenang, sirkulasi udara baik, cocok untuk istirahat & belajar.</p>
                     </div>
-                    <div class="p-4 hover:bg-gray-50 rounded-lg transition">
-                        <i class="fa-solid fa-shield-halved text-4xl text-teal-500 mb-3"></i>
-                        <h3 class="font-semibold">CCTV 24 Jam</h3>
-                    </div>
-                    <div class="p-4 hover:bg-gray-50 rounded-lg transition">
-                        <i class="fa-solid fa-square-parking text-4xl text-teal-500 mb-3"></i>
-                        <h3 class="font-semibold">Parkir Luas</h3>
+                    <div class="p-6 border border-gray-100 rounded-2xl hover:shadow-lg transition duration-300">
+                        <div class="w-12 h-12 bg-accent rounded-full flex items-center justify-center mx-auto mb-4 text-primary">
+                            <i class="fa-solid fa-shield-cat text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Aman & Nyaman</h3>
+                        <p class="text-gray-500 text-sm">Dilengkapi CCTV, parkir motor aman, dan akses gerbang pribadi.</p>
                     </div>
                 </div>
             </div>
@@ -74,351 +101,267 @@
 
         <section id="gallery" class="py-16 bg-gray-50">
             <div class="max-w-6xl mx-auto px-4">
-                <div class="text-center mb-8">
-                    <h2 class="text-3xl font-bold mb-4">Galeri Kos</h2>
-                    <div class="flex justify-center space-x-4 border-b border-gray-200 inline-block">
-                        <button onclick="filterGallery('all')" class="gallery-tab active-tab pb-2 px-4">Semua</button>
-                        <button onclick="filterGallery('kamar')" class="gallery-tab pb-2 px-4 text-gray-500 hover:text-teal-600">Kamar</button>
-                        <button onclick="filterGallery('km')" class="gallery-tab pb-2 px-4 text-gray-500 hover:text-teal-600">Kamar Mandi</button>
-                        <button onclick="filterGallery('umum')" class="gallery-tab pb-2 px-4 text-gray-500 hover:text-teal-600">Ruang Bersama</button>
+                <div class="flex flex-col md:flex-row justify-between items-end mb-8">
+                    <div>
+                        <h2 class="text-3xl font-bold text-gray-900">Galeri Green House</h2>
+                        <p class="text-gray-500 mt-2">Intip kenyamanan hunian kami</p>
+                    </div>
+                    <div class="flex space-x-2 mt-4 md:mt-0">
+                        <button onclick="filterGallery('all')" class="gallery-tab active-tab px-4 py-2 text-sm">Semua</button>
+                        <button onclick="filterGallery('kamar')" class="gallery-tab px-4 py-2 text-sm text-gray-500 hover:text-primary">Kamar</button>
+                        <button onclick="filterGallery('fasilitas')" class="gallery-tab px-4 py-2 text-sm text-gray-500 hover:text-primary">Fasilitas</button>
                     </div>
                 </div>
                 
-                <div id="galleryGrid" class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=800&q=80" class="rounded-lg shadow-sm hover:shadow-md transition w-full h-64 object-cover gallery-item" data-category="kamar">
-                    <img src="https://images.unsplash.com/photo-1584622050111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" class="rounded-lg shadow-sm hover:shadow-md transition w-full h-64 object-cover gallery-item" data-category="km">
-                    <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?auto=format&fit=crop&w=800&q=80" class="rounded-lg shadow-sm hover:shadow-md transition w-full h-64 object-cover gallery-item" data-category="umum">
-                     <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=800&q=80" class="rounded-lg shadow-sm hover:shadow-md transition w-full h-64 object-cover gallery-item" data-category="kamar">
+                <div id="galleryGrid" class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=800&q=80" class="col-span-2 row-span-2 h-full w-full object-cover rounded-2xl gallery-item" data-category="kamar">
+                    <img src="https://images.unsplash.com/photo-1584622050111-993a426fbf0a?auto=format&fit=crop&w=400&q=80" class="h-48 w-full object-cover rounded-2xl gallery-item" data-category="fasilitas">
+                    <img src="https://images.unsplash.com/photo-1522771753035-4a53c6288953?auto=format&fit=crop&w=400&q=80" class="h-48 w-full object-cover rounded-2xl gallery-item" data-category="kamar">
+                    <img src="https://images.unsplash.com/photo-1560185007-cde436f6a4d0?auto=format&fit=crop&w=400&q=80" class="h-48 w-full object-cover rounded-2xl gallery-item" data-category="fasilitas">
+                    <img src="https://images.unsplash.com/photo-1484154218962-a1c002085d2f?auto=format&fit=crop&w=400&q=80" class="h-48 w-full object-cover rounded-2xl gallery-item" data-category="fasilitas">
                 </div>
             </div>
         </section>
 
         <section id="kamar" class="py-16 bg-white">
             <div class="max-w-6xl mx-auto px-4">
-                <h2 class="text-3xl font-bold text-center mb-10">Pilihan Kamar</h2>
-                <div id="roomList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <h2 class="text-3xl font-bold text-center mb-12">Pilihan Kamar</h2>
+                <div id="roomList" class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     </div>
             </div>
         </section>
 
-        <section id="lokasi" class="py-16 bg-gray-50">
-            <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row gap-10">
-                <div class="w-full md:w-2/3">
-                    <h2 class="text-2xl font-bold mb-6">Lokasi Strategis</h2>
-                    <div class="w-full h-80 bg-gray-300 rounded-lg overflow-hidden shadow-md relative">
-                        <div class="absolute inset-0 flex items-center justify-center text-gray-500 bg-gray-200">
-                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.887640306159!2d110.36034531477755!3d-7.801757994378125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a57891395610d%3A0x6b49e2954700d3d!2sMantrijeron%2C%20Yogyakarta%20City%2C%20Special%20Region%20of%20Yogyakarta!5e0!3m2!1sen!2sid!4v1678892131234!5m2!1sen!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                        </div>
-                    </div>
-                    <div class="mt-4 grid grid-cols-2 gap-4 text-sm">
-                        <div class="flex items-center"><i class="fa-solid fa-location-dot text-red-500 mr-2"></i> 5 Menit ke Alun-Alun Kidul</div>
-                        <div class="flex items-center"><i class="fa-solid fa-graduation-cap text-blue-500 mr-2"></i> 15 Menit ke UGM</div>
-                        <div class="flex items-center"><i class="fa-solid fa-cart-shopping text-green-500 mr-2"></i> 2 Menit ke Superindo</div>
-                        <div class="flex items-center"><i class="fa-solid fa-train text-orange-500 mr-2"></i> 10 Menit ke Stasiun Tugu</div>
-                    </div>
+        <section id="lokasi" class="py-16 bg-accent/30">
+            <div class="max-w-6xl mx-auto px-4 flex flex-col lg:flex-row gap-12 items-center">
+                <div class="w-full lg:w-1/2">
+                    <span class="text-primary font-bold tracking-wider text-sm uppercase">Lokasi Kami</span>
+                    <h2 class="text-3xl font-bold mt-2 mb-6">Akses Mudah Kemana Saja</h2>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <span class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-primary shadow-sm mr-4"><i class="fa-solid fa-graduation-cap"></i></span>
+                            <span><strong>5 Menit</strong> ke Kampus UMY (Terpadu)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-primary shadow-sm mr-4"><i class="fa-solid fa-school"></i></span>
+                            <span><strong>7 Menit</strong> ke Alma Ata & BSI</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-primary shadow-sm mr-4"><i class="fa-solid fa-road"></i></span>
+                            <span><strong>3 Menit</strong> ke Ringroad Selatan</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-primary shadow-sm mr-4"><i class="fa-solid fa-basket-shopping"></i></span>
+                            <span><strong>Dekat</strong> Indomaret/Alfamart & Laundry</span>
+                        </li>
+                    </ul>
+                    <a href="https://maps.google.com/?q=Green+House+NS+Kasihan+Bantul" target="_blank" class="inline-block bg-white text-gray-800 px-6 py-3 rounded-lg font-semibold shadow hover:shadow-md transition border border-gray-200">
+                        <i class="fa-solid fa-map-location-dot mr-2 text-primary"></i> Buka Google Maps
+                    </a>
                 </div>
-
-                <div class="w-full md:w-1/3">
-                    <h2 class="text-2xl font-bold mb-6">Peraturan & FAQ</h2>
-                    <div class="space-y-4">
-                        <details class="bg-white p-4 rounded-lg shadow-sm group">
-                            <summary class="font-semibold cursor-pointer flex justify-between items-center">
-                                Jam Malam?
-                                <i class="fa-solid fa-chevron-down text-sm group-open:rotate-180 transition"></i>
-                            </summary>
-                            <p class="text-gray-600 mt-2 text-sm">Bebas 24 Jam. Penghuni memegang kunci gerbang masing-masing.</p>
-                        </details>
-                        <details class="bg-white p-4 rounded-lg shadow-sm group">
-                            <summary class="font-semibold cursor-pointer flex justify-between items-center">
-                                Tamu Lawan Jenis?
-                                <i class="fa-solid fa-chevron-down text-sm group-open:rotate-180 transition"></i>
-                            </summary>
-                            <p class="text-gray-600 mt-2 text-sm">Dilarang masuk kamar. Silakan terima tamu di ruang bersama/teras.</p>
-                        </details>
-                        <details class="bg-white p-4 rounded-lg shadow-sm group">
-                            <summary class="font-semibold cursor-pointer flex justify-between items-center">
-                                Biaya Tambahan?
-                                <i class="fa-solid fa-chevron-down text-sm group-open:rotate-180 transition"></i>
-                            </summary>
-                            <p class="text-gray-600 mt-2 text-sm">Harga sudah termasuk air & WiFi. Listrik menggunakan token masing-masing.</p>
-                        </details>
-                    </div>
-                    
-                    <div class="mt-8 p-4 bg-teal-50 rounded-lg border border-teal-100">
-                         <h3 class="font-bold text-teal-800 mb-2">Jadwalkan Survei</h3>
-                         <form onsubmit="sendSurvey(event)" class="space-y-2">
-                             <input type="text" id="surveyName" placeholder="Nama Anda" class="w-full p-2 text-sm border rounded">
-                             <input type="datetime-local" id="surveyDate" class="w-full p-2 text-sm border rounded">
-                             <button type="submit" class="w-full bg-teal-600 text-white text-sm py-2 rounded hover:bg-teal-700">Kirim Jadwal via WA</button>
-                         </form>
+                <div class="w-full lg:w-1/2">
+                    <div class="bg-white p-2 rounded-2xl shadow-xl">
+                        <div class="rounded-xl overflow-hidden h-[400px]">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.835473784568!2d110.345!3d-7.815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a57a1e0b5b5b5%3A0x5a5b5b5b5b5b5b5b!2sGreen%20House%20NS!5e0!3m2!1sid!2sid!4v1620000000000!5m2!1sid!2sid" 
+                                width="100%" 
+                                height="100%" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                            </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <footer class="bg-gray-900 text-white py-8 text-center">
-            <p>&copy; 2024 Kos Melati Mantrijeron. All rights reserved.</p>
-            <div class="mt-4">
-                <button onclick="generateQRCode()" class="text-xs text-gray-500 hover:text-white underline">Generate QR Code untuk Website Ini</button>
+        <footer class="bg-gray-900 text-white pt-16 pb-8">
+            <div class="max-w-6xl mx-auto px-4 text-center">
+                <h2 class="text-2xl font-bold mb-2">Green House NS</h2>
+                <p class="text-gray-400 mb-8">Hunian nyaman di Kasihan, Bantul, Yogyakarta.</p>
+                <div class="border-t border-gray-800 pt-8 text-sm text-gray-500">
+                    &copy; 2024 Green House NS Management. All rights reserved.
+                </div>
             </div>
         </footer>
 
-        <a href="https://wa.me/6281234567890" target="_blank" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl z-50 flex items-center justify-center transition hover:scale-110">
-            <i class="fa-brands fa-whatsapp text-3xl"></i>
+        <a href="https://wa.me/6281234567890" target="_blank" class="group fixed bottom-6 right-6 z-50 flex items-center gap-2">
+            <span class="bg-white text-gray-800 px-4 py-2 rounded-lg shadow-lg text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:block">
+                Chat Admin Sekarang
+            </span>
+            <div class="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl transition hover:scale-110 flex items-center justify-center w-14 h-14">
+                <i class="fa-brands fa-whatsapp text-3xl"></i>
+            </div>
         </a>
+
     </main>
 
     <div id="adminPanel" class="hidden-section fixed inset-0 bg-gray-100 z-[60] overflow-y-auto">
-        <div class="max-w-5xl mx-auto p-6">
+        <div class="max-w-4xl mx-auto p-6 md:p-10">
             <div class="flex justify-between items-center mb-8">
-                <h1 class="text-3xl font-bold text-gray-800">Dashboard Pemilik Kos</h1>
-                <button onclick="toggleAdminPanel()" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Keluar / Ke Website Utama</button>
+                <div>
+                    <h1 class="text-2xl font-bold text-gray-800">Dashboard Owner</h1>
+                    <p class="text-gray-500 text-sm">Green House NS Management System</p>
+                </div>
+                <button onclick="toggleAdminPanel()" class="bg-red-500/10 text-red-600 px-4 py-2 rounded-lg hover:bg-red-500 hover:text-white transition font-medium text-sm">
+                    <i class="fa-solid fa-arrow-right-from-bracket mr-2"></i> Keluar
+                </button>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <h2 class="text-xl font-bold mb-4 flex items-center"><i class="fa-solid fa-bed mr-2 text-teal-600"></i> Manajemen Ketersediaan</h2>
-                    <p class="text-sm text-gray-500 mb-4">Klik toggle untuk mengubah status kamar di halaman depan.</p>
-                    <div id="adminRoomList" class="space-y-4">
-                        </div>
+            <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden mb-8">
+                <div class="p-6 border-b border-gray-100 flex justify-between items-center bg-gray-50">
+                    <h2 class="font-bold text-gray-800">Status Kamar</h2>
+                    <span class="text-xs text-gray-500 bg-white px-2 py-1 rounded border">Live Update</span>
                 </div>
-
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <h2 class="text-xl font-bold mb-4 flex items-center"><i class="fa-solid fa-users mr-2 text-teal-600"></i> Data Penyewa</h2>
-                    
-                    <form onsubmit="addTenant(event)" class="mb-6 bg-gray-50 p-4 rounded border border-gray-200">
-                        <div class="grid grid-cols-2 gap-2 mb-2">
-                            <input type="text" id="tenantName" placeholder="Nama Penyewa" class="p-2 border rounded text-sm" required>
-                            <input type="text" id="tenantRoom" placeholder="Kamar (Misal: A1)" class="p-2 border rounded text-sm" required>
-                        </div>
-                        <div class="grid grid-cols-2 gap-2 mb-2">
-                            <input type="tel" id="tenantPhone" placeholder="No HP" class="p-2 border rounded text-sm" required>
-                            <input type="date" id="tenantDue" class="p-2 border rounded text-sm" required>
-                        </div>
-                        <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded text-sm hover:bg-blue-700">Simpan Data Penyewa</button>
-                    </form>
-
-                    <div class="overflow-x-auto">
-                        <table class="w-full text-sm text-left">
-                            <thead class="bg-gray-100">
-                                <tr>
-                                    <th class="p-2">Nama</th>
-                                    <th class="p-2">Kamar</th>
-                                    <th class="p-2">Jatuh Tempo</th>
-                                    <th class="p-2">Aksi</th>
-                                </tr>
-                            </thead>
-                            <tbody id="tenantTableBody">
-                                </tbody>
-                        </table>
+                <div id="adminRoomList" class="divide-y divide-gray-100">
                     </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                <div class="p-6 border-b border-gray-100">
+                    <h2 class="font-bold text-gray-800">Data Penghuni</h2>
+                </div>
+                <div class="p-6">
+                    <form onsubmit="addTenant(event)" class="flex gap-2 mb-6">
+                        <input type="text" id="tenantName" placeholder="Nama" class="flex-1 p-2 border rounded-lg text-sm focus:ring-2 focus:ring-primary focus:outline-none" required>
+                        <input type="text" id="tenantRoom" placeholder="Kamar" class="w-24 p-2 border rounded-lg text-sm" required>
+                        <input type="date" id="tenantDue" class="p-2 border rounded-lg text-sm" required>
+                        <button type="submit" class="bg-primary text-white px-4 py-2 rounded-lg text-sm hover:bg-secondary"><i class="fa-solid fa-plus"></i></button>
+                    </form>
+                    <table class="w-full text-sm text-left">
+                        <thead class="text-gray-500 bg-gray-50 uppercase text-xs">
+                            <tr><th class="p-3">Nama</th><th class="p-3">Kamar</th><th class="p-3">Jatuh Tempo</th><th class="p-3 text-right">Aksi</th></tr>
+                        </thead>
+                        <tbody id="tenantTableBody"></tbody>
+                    </table>
                 </div>
             </div>
         </div>
     </div>
 
     <script>
-        // DATA AWAL (SIMULASI DATABASE)
-        const initialRooms = [
-            { id: 1, name: "Kamar Tipe A (AC)", price: "Rp 1.500.000", type: "AC", status: "Tersedia", img: "https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=800&q=80" },
-            { id: 2, name: "Kamar Tipe B (Non-AC)", price: "Rp 850.000", type: "Non-AC", status: "Tersedia", img: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=800&q=80" },
-            { id: 3, name: "Kamar Tipe VIP", price: "Rp 2.000.000", type: "AC", status: "Penuh", img: "https://images.unsplash.com/photo-1616594039964-40891a909d93?auto=format&fit=crop&w=800&q=80" },
+        // CONFIG
+        const roomsData = [
+            { id: 1, name: "Tipe Standard (Fan)", price: "Rp 600.000", features: ["Kamar Mandi Luar", "Kasur Busa", "Fan"], status: "Tersedia", img: "https://images.unsplash.com/photo-1596298516186-b4d24263351d?auto=format&fit=crop&w=600&q=80" },
+            { id: 2, name: "Tipe Superior (Fan)", price: "Rp 850.000", features: ["Kamar Mandi Dalam", "Springbed", "Fan"], status: "Tersedia", img: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=600&q=80" },
+            { id: 3, name: "Tipe Deluxe (AC)", price: "Rp 1.300.000", features: ["KM Dalam", "AC", "WiFi Dedicated"], status: "Penuh", img: "https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=600&q=80" },
         ];
 
-        // LOAD DATA FROM LOCALSTORAGE OR USE INITIAL
-        let rooms = JSON.parse(localStorage.getItem('kosRooms')) || initialRooms;
-        let tenants = JSON.parse(localStorage.getItem('kosTenants')) || [];
+        let rooms = JSON.parse(localStorage.getItem('gh_rooms')) || roomsData;
+        let tenants = JSON.parse(localStorage.getItem('gh_tenants')) || [];
 
-        // RENDER FUNCTIONS
-        function renderPublicRooms() {
+        function renderPublic() {
             const container = document.getElementById('roomList');
             container.innerHTML = '';
             rooms.forEach(room => {
-                const statusColor = room.status === 'Tersedia' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800';
-                const btnState = room.status === 'Tersedia' ? '' : 'opacity-50 cursor-not-allowed';
-                const btnText = room.status === 'Tersedia' ? 'Pesan via WA' : 'Penuh';
-                
-                // Smart WA Link
-                const waText = `Halo, saya tertarik dengan ${room.name} seharga ${room.price}. Apakah masih ada?`;
-                const waLink = room.status === 'Tersedia' ? `https://wa.me/6281234567890?text=${encodeURIComponent(waText)}` : '#';
+                const isFull = room.status === 'Penuh';
+                const badgeClass = isFull ? 'bg-red-100 text-red-600' : 'bg-green-100 text-green-700';
+                const btnClass = isFull ? 'bg-gray-200 text-gray-400 cursor-not-allowed' : 'bg-gray-900 text-white hover:bg-gray-800';
+                const waLink = isFull ? '#' : `https://wa.me/6281234567890?text=Halo admin Green House NS, saya minat ${room.name}`;
 
                 container.innerHTML += `
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition flex flex-col h-full border border-gray-100">
-                        <div class="relative">
-                            <img src="${room.img}" class="w-full h-48 object-cover">
-                            <span class="absolute top-4 right-4 ${statusColor} text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide shadow-sm">
-                                ${room.status}
-                            </span>
-                        </div>
-                        <div class="p-6 flex flex-col flex-grow">
-                            <h3 class="text-xl font-bold mb-2 text-gray-800">${room.name}</h3>
-                            <div class="text-teal-600 font-bold text-lg mb-4">${room.price} <span class="text-sm text-gray-500 font-normal">/ bulan</span></div>
-                            <ul class="text-gray-600 text-sm mb-6 space-y-2 flex-grow">
-                                <li><i class="fa-solid fa-bed w-6 text-center"></i> Kasur Springbed & Lemari</li>
-                                <li><i class="fa-solid fa-wifi w-6 text-center"></i> WiFi Gratis</li>
-                                <li><i class="fa-solid fa-bolt w-6 text-center"></i> Listrik Token</li>
-                                ${room.type === 'AC' ? '<li><i class="fa-solid fa-snowflake w-6 text-center"></i> AC Dingin</li>' : ''}
-                            </ul>
-                            <a href="${waLink}" target="_blank" class="block w-full bg-gray-900 text-white text-center py-3 rounded-lg hover:bg-gray-800 transition ${btnState}">
-                                <i class="fa-brands fa-whatsapp mr-2"></i> ${btnText}
-                            </a>
-                        </div>
+                <div class="bg-white rounded-2xl border border-gray-100 shadow-lg hover:shadow-xl transition overflow-hidden flex flex-col">
+                    <div class="relative h-56">
+                        <img src="${room.img}" class="w-full h-full object-cover">
+                        <span class="absolute top-4 right-4 ${badgeClass} text-xs font-bold px-3 py-1 rounded-full shadow-sm">${room.status}</span>
                     </div>
-                `;
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-900">${room.name}</h3>
+                        </div>
+                        <div class="text-primary font-bold text-lg mb-4">${room.price} <span class="text-xs text-gray-400 font-normal">/bulan</span></div>
+                        <ul class="text-sm text-gray-600 space-y-2 mb-6 flex-grow">
+                            ${room.features.map(f => `<li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2 text-xs"></i>${f}</li>`).join('')}
+                        </ul>
+                        <a href="${waLink}" class="block w-full text-center py-3 rounded-lg font-semibold transition ${btnClass}">
+                            ${isFull ? 'Penuh' : 'Booking via WA'}
+                        </a>
+                    </div>
+                </div>`;
             });
         }
 
-        function renderAdminRooms() {
-            const container = document.getElementById('adminRoomList');
-            container.innerHTML = '';
-            rooms.forEach((room, index) => {
-                const isChecked = room.status === 'Tersedia' ? 'checked' : '';
-                container.innerHTML += `
-                    <div class="flex items-center justify-between p-3 border rounded bg-gray-50">
+        function renderAdmin() {
+            const list = document.getElementById('adminRoomList');
+            list.innerHTML = '';
+            rooms.forEach((room, idx) => {
+                list.innerHTML += `
+                <div class="p-4 flex items-center justify-between hover:bg-gray-50 transition">
+                    <div class="flex items-center gap-4">
+                        <img src="${room.img}" class="w-12 h-12 rounded object-cover bg-gray-200">
                         <div>
-                            <p class="font-bold text-gray-800">${room.name}</p>
-                            <p class="text-xs text-gray-500">${room.status}</p>
+                            <p class="font-bold text-gray-800 text-sm">${room.name}</p>
+                            <p class="text-xs text-gray-500">${room.price}</p>
                         </div>
-                        <label class="relative inline-flex items-center cursor-pointer">
-                            <input type="checkbox" class="sr-only peer" onchange="toggleRoomStatus(${index})" ${isChecked}>
-                            <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-teal-600"></div>
-                        </label>
                     </div>
-                `;
+                    <button onclick="toggleStatus(${idx})" class="${room.status === 'Tersedia' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'} px-4 py-1 rounded-full text-xs font-bold w-24">
+                        ${room.status}
+                    </button>
+                </div>`;
             });
-        }
 
-        function renderTenants() {
             const tbody = document.getElementById('tenantTableBody');
             tbody.innerHTML = '';
-            const today = new Date();
-            
-            tenants.forEach((tenant, index) => {
-                const dueDate = new Date(tenant.due);
-                const diffTime = dueDate - today;
-                const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
-                
-                let rowClass = "";
-                let alertIcon = "";
-                
-                if (diffDays <= 3 && diffDays >= 0) {
-                    rowClass = "bg-red-50 text-red-700 font-semibold"; // Warning color
-                    alertIcon = `<i class="fa-solid fa-triangle-exclamation ml-1" title="Jatuh tempo dekat!"></i>`;
-                }
-
+            tenants.forEach((t, i) => {
                 tbody.innerHTML += `
-                    <tr class="border-b ${rowClass}">
-                        <td class="p-2">${tenant.name}</td>
-                        <td class="p-2">${tenant.room}</td>
-                        <td class="p-2">${tenant.due} ${alertIcon}</td>
-                        <td class="p-2">
-                            <button onclick="deleteTenant(${index})" class="text-red-500 hover:text-red-700"><i class="fa-solid fa-trash"></i></button>
-                        </td>
-                    </tr>
-                `;
+                <tr class="border-b border-gray-50 last:border-0 hover:bg-gray-50">
+                    <td class="p-3 font-medium">${t.name}</td>
+                    <td class="p-3">${t.room}</td>
+                    <td class="p-3 text-gray-500">${t.due}</td>
+                    <td class="p-3 text-right">
+                        <button onclick="delTenant(${i})" class="text-red-400 hover:text-red-600"><i class="fa-solid fa-trash"></i></button>
+                    </td>
+                </tr>`;
             });
         }
 
-        // LOGIC FUNCTIONS
-        function toggleRoomStatus(index) {
-            rooms[index].status = rooms[index].status === 'Tersedia' ? 'Penuh' : 'Tersedia';
-            saveData();
-            renderAdminRooms();
-            renderPublicRooms(); // Update public view immediately
+        function toggleStatus(idx) {
+            rooms[idx].status = rooms[idx].status === 'Tersedia' ? 'Penuh' : 'Tersedia';
+            save(); renderPublic(); renderAdmin();
         }
 
         function addTenant(e) {
             e.preventDefault();
             const name = document.getElementById('tenantName').value;
             const room = document.getElementById('tenantRoom').value;
-            const phone = document.getElementById('tenantPhone').value;
             const due = document.getElementById('tenantDue').value;
-
-            tenants.push({ name, room, phone, due });
-            saveData();
-            renderTenants();
-            e.target.reset();
+            tenants.push({name, room, due});
+            save(); renderAdmin(); e.target.reset();
         }
 
-        function deleteTenant(index) {
-            if(confirm('Hapus data penyewa ini?')) {
-                tenants.splice(index, 1);
-                saveData();
-                renderTenants();
-            }
+        function delTenant(i) {
+            if(confirm('Hapus?')) { tenants.splice(i, 1); save(); renderAdmin(); }
         }
 
-        function saveData() {
-            localStorage.setItem('kosRooms', JSON.stringify(rooms));
-            localStorage.setItem('kosTenants', JSON.stringify(tenants));
+        function save() {
+            localStorage.setItem('gh_rooms', JSON.stringify(rooms));
+            localStorage.setItem('gh_tenants', JSON.stringify(tenants));
         }
 
         function toggleAdminPanel() {
-            const adminPanel = document.getElementById('adminPanel');
-            const publicView = document.getElementById('publicView');
-            
-            if (adminPanel.style.display === 'block') {
-                adminPanel.style.display = 'none';
-                publicView.style.display = 'block';
-                window.scrollTo(0, 0);
+            const p = document.getElementById('adminPanel');
+            const v = document.getElementById('publicView');
+            if(p.style.display === 'block') {
+                p.style.display = 'none'; v.style.display = 'block'; window.scrollTo(0,0);
             } else {
-                const password = prompt("Masukkan Password Admin (Demo: ketik 'admin')");
-                if (password === 'admin') {
-                    adminPanel.style.display = 'block';
-                    publicView.style.display = 'none';
-                    renderAdminRooms();
-                    renderTenants();
-                } else if (password !== null) {
-                    alert("Password Salah!");
+                if(prompt('Password Owner') === 'admin') {
+                    p.style.display = 'block'; v.style.display = 'none'; renderAdmin();
                 }
             }
         }
 
-        // Gallery Filter
-        function filterGallery(category) {
-            const items = document.querySelectorAll('.gallery-item');
-            const tabs = document.querySelectorAll('.gallery-tab');
-            
-            // Style tabs
-            tabs.forEach(tab => {
-                tab.classList.remove('active-tab', 'text-teal-600', 'font-bold');
-                tab.classList.add('text-gray-500');
-                if(tab.textContent.toLowerCase().includes(category === 'km' ? 'mandi' : category === 'umum' ? 'bersama' : category)) {
-                     // Simple logic to highlight tab, works for demo
-                     if(category === 'all' && tab.textContent === 'Semua') tab.classList.add('active-tab');
-                }
+        function filterGallery(cat) {
+            document.querySelectorAll('.gallery-item').forEach(el => {
+                el.style.display = (cat === 'all' || el.dataset.category === cat) ? 'block' : 'none';
             });
-            event.target.classList.add('active-tab');
-            event.target.classList.remove('text-gray-500');
-
-            items.forEach(item => {
-                if (category === 'all' || item.dataset.category === category) {
-                    item.style.display = 'block';
-                    item.classList.add('fade-in');
-                } else {
-                    item.style.display = 'none';
-                }
+            document.querySelectorAll('.gallery-tab').forEach(t => {
+                t.classList.remove('active-tab');
+                if(t.textContent.toLowerCase().includes(cat === 'all' ? 'semua' : cat)) t.classList.add('active-tab');
             });
         }
 
-        // Form Survei WA
-        function sendSurvey(e) {
-            e.preventDefault();
-            const name = document.getElementById('surveyName').value;
-            const date = document.getElementById('surveyDate').value;
-            const text = `Halo Admin, saya ${name} ingin survei lokasi pada tanggal ${date}. Apakah bisa?`;
-            window.open(`https://wa.me/6281234567890?text=${encodeURIComponent(text)}`);
-        }
-
-        // QR Generator (Simulasi)
-        function generateQRCode() {
-            const url = window.location.href;
-            alert(`Di aplikasi real, ini akan mencetak QR Code untuk URL: ${url}\n\nAnda bisa menggunakan layanan gratis seperti goqr.me untuk mencetaknya dan tempel di gerbang kos.`);
-        }
-
-        // INIT
-        renderPublicRooms();
+        renderPublic();
     </script>
 </body>
 </html>
